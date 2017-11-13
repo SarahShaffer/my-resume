@@ -1,0 +1,92 @@
+
+{% extends "home-base.html"%}
+{% block title %}All Courses{% endblock %}
+{% block head%}
+  {{ super() }}
+{% endblock%}
+
+{% block page_content%}
+  <!-- Page Content -->
+
+  <div class="container">
+
+    <h1 class="mt-5"> <i class="fa fa-book" aria-hidden="true"></i> Browse All Courses:</h1>
+    <ul>
+{% for course in courses %}
+<li>{{course}}</li>
+{% endfor %}
+
+
+    </ul>
+
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+MISY330</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+MISY350</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+MISY160</button>
+
+  </div>
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="exampleModalLabel">MISY330</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body">
+       Covers the design and implementation of enterprise databases in the business environment. A networked setting and its effect on database management will be emphasized.
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+           </div>
+   </div>
+ </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+ <div class="modal-header">
+   <h5 class="modal-title" id="exampleModalLabel1">MISY350</h5>
+   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+     <span aria-hidden="true">&times;</span>
+   </button>
+ </div>
+ <div class="modal-body">
+
+   Covers concepts related to client side development, including cascading style sheets and JavaScript.  </div>
+ <div class="modal-footer">
+   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+ <div class="modal-header">
+   <h5 class="modal-title" id="exampleModalLabel2">MISY160</h5>
+   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+     <span aria-hidden="true">&times;</span>
+   </button>
+ </div>
+ <div class="modal-body">
+Introduction to computers: components and operations. Introduction to management information/decision support systems and the system development process. Emphasis on microcomputers and software packages used in business.  </div>
+ <div class="modal-footer">
+   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+{% endblock%}
